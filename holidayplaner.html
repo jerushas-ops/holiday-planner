@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌴 Dream Holiday Planner 🌄</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container my-5">
+  <!-- Creative Banner -->
+  <div class="banner">
+    <h1>Your Dream Destination! 🌴</h1>
+    <p>Plan your perfect vacation with ease!</p>
+  </div>
+
+  <!-- Destination Selection -->
+  <div class="card p-3 mb-3">
+    <h5>Choose Your Destination</h5>
+    <div class="row mt-2">
+      <div class="col-md-4 mb-2">
+        <div class="card activity-card" onclick="$('#destination').val('beach')">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Beach">
+          <div class="card-body text-center"><p class="card-text">Beach</p></div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="card activity-card" onclick="$('#destination').val('mountain')">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Mountain">
+          <div class="card-body text-center"><p class="card-text">Mountain</p></div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-2">
+        <div class="card activity-card" onclick="$('#destination').val('city')">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=400&q=80" alt="City Nightlife">
+          <div class="card-body text-center"><p class="card-text">City</p></div>
+        </div>
+      </div>
+    </div>
+
+    <select id="destination" class="form-select mt-2">
+      <option value="">Select a destination</option>
+      <option value="beach">Beach</option>
+      <option value="mountain">Mountain</option>
+      <option value="city">City</option>
+    </select>
+  </div>
+
+  <!-- Accommodation & Transport -->
+  <div class="card p-3 mb-3">
+    <h5>Accommodation & Transport</h5>
+    <div class="row">
+      <div class="col-md-6 mb-2">
+        <label>Hotel:</label>
+        <select id="hotel" class="form-select">
+          <option value="0">Select hotel</option>
+          <option value="100">Budget Hotel ($100)</option>
+          <option value="200">Luxury Hotel ($200)</option>
+        </select>
+      </div>
+      <div class="col-md-6 mb-2">
+        <label>Transport:</label>
+        <select id="transport" class="form-select">
+          <option value="0">Select transport</option>
+          <option value="150">Flight ($150)</option>
+          <option value="50">Bus ($50)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activity Planner -->
+  <div class="card p-3 mb-3">
+    <h5>Select Activities & Schedule</h5>
+    <div class="row">
+      <!-- Activity 1 -->
+      <div class="col-md-4 mb-2">
+        <div class="form-check card p-2 activity-card">
+          <input class="form-check-input activity" type="checkbox" value="50" id="activity1">
+          <label class="form-check-label" for="activity1">🏖 Sightseeing ($50)</label>
+          <input type="date" class="form-control mt-2 activity-date" data-for="activity1" disabled>
+          <input type="time" class="form-control mt-2 activity-time" data-for="activity1" disabled>
+        </div>
+      </div>
+      <!-- Activity 2 -->
+      <div class="col-md-4 mb-2">
+        <div class="form-check card p-2 activity-card">
+          <input class="form-check-input activity" type="checkbox" value="100" id="activity2">
+          <label class="form-check-label" for="activity2">🧗 Adventure Sports ($100)</label>
+          <input type="date" class="form-control mt-2 activity-date" data-for="activity2" disabled>
+          <input type="time" class="form-control mt-2 activity-time" data-for="activity2" disabled>
+        </div>
+      </div>
+      <!-- Activity 3 -->
+      <div class="col-md-4 mb-2">
+        <div class="form-check card p-2 activity-card">
+          <input class="form-check-input activity" type="checkbox" value="30" id="activity3">
+          <label class="form-check-label" for="activity3">🏛 Museum Visit ($30)</label>
+          <input type="date" class="form-control mt-2 activity-date" data-for="activity3" disabled>
+          <input type="time" class="form-control mt-2 activity-time" data-for="activity3" disabled>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trip Itinerary -->
+  <div class="card p-3 mb-3">
+    <h5>Trip Itinerary</h5>
+    <textarea id="itinerary" class="form-control" rows="6" placeholder="Your itinerary will appear here..."></textarea>
+  </div>
+
+  <!-- Budget Tracker -->
+  <div class="card p-3 mb-3 text-center">
+    <h5>Budget Tracker</h5>
+    <p>Total Estimated Cost: $<span id="budget">0</span></p>
+  </div>
+
+  <button id="generateTrip" class="btn btn-primary w-100 btn-lg">Generate My Dream Trip ✈️</button>
+</div>
+
+<!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

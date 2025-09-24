@@ -1,0 +1,35 @@
+body {
+  background-color: #f0f8ff;
+}
+
+.banner {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.budget {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0072ff;
+}
+
+.activity-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.activity-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
